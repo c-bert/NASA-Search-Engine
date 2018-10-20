@@ -12,17 +12,13 @@
 src="https://code.jquery.com/jquery-3.2.1.min.js"
 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-<!-- pagination script -->
-    <script type="text/javascript" src="jquery.simplePagination.js"></script>
-    <link type="text/css" rel="stylesheet" href="simplePagination.css"/>         
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>        
     <title>NASA Inspiration</title>
 </head>
 <body>
 <!-- section for start page- Don't forget to use media queries in CSS -->
     <header role="banner">
         <h1 class="main-header">NASA Search Generator</h1>
-        <div class="luminaire"></div>
         <h2 class="welcome-page">Discover The Universe</h2>
     </header>
         <main aria-live="polite">
@@ -34,6 +30,7 @@ crossorigin="anonymous"></script>
                <button type="submit" class="trigger">Search NASA</button>
             </form>
             </section>
+            <div class="luminaire"></div>
 <!-- display search results content-->                     
         <div id="js-search-results">
                 <div id="js-count-results" class="modal-content" aria-live="polite"></div>      

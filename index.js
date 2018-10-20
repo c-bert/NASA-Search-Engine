@@ -11,8 +11,19 @@ function watchNASASubmit() {
   const query = $('#NASA-search-box').val();
   // clear out the input (setter)
   $('#NASA-search-box').val("");
-  getNASADataFromApi(query, validateResults);
+  if (query == 0) {
+    alert("You didn't tell us what to search!");
+                }
+  else {getNASADataFromApi(query, validateResults);
   console.log("get NASA Data from API " + getNASADataFromApi);
+  //handle CSS luminaire
+$(function luminaire() {
+  $('.luminaire:nth-child(2n)').addClass('on');
+  $('.NASA-search').on('click', function() {
+    $(this).toggleClass('on');
+  });
+});
+}
 });
 };
 
@@ -30,8 +41,9 @@ function getNASADataFromApi(searchTerm, callback) {
 function validateResults(receivedApiData) {
   //show the json array received from the API call
   // if there are no results it will show an error
-  console.log("This is received API Data " + receivedApiData);
-  if (JSON.stringify(receivedApiData) == 0) {
+  console.log("This is received API Data " + receivedApiData.collection);
+  if (receivedApiData == 0) {
+    console.log("error");
     alert("Sorry, your search did not yield results!");
                 }
   // if there are results, call the displayNASASearchData
@@ -52,7 +64,7 @@ function renderImagesResults(images) {
     getCollectionJSON(imageCollectionHref).then(function (imageArray){
       const origImageURL = imageArray[0];
       // console.log("This is the original image " + origImageURL);
-      imagesHTML += `<div id="display-images" class="row"><div class="col-3"><h2>Image Title: ${imageTitle}</h2>
+      imagesHTML += `<div id="display-images" class="row"><div class="col-3"><h3>Image Title: ${imageTitle}</h3>
     <img src="${imageThumbURL}" alt="${imageDescrip}">
     <p>${imageDescrip}
     <a href="${origImageURL}" + "' target='_blank'>View</a>
@@ -77,8 +89,8 @@ function renderImagesResults(images) {
     videoTitle= videoTitle.replace(/[_-]/g, " ");
     console.log("video JSON " + videoJSON);
     console.log("video description " + videoDescrip);
-    videosHTML += `<div id="display-videos" class="row"> <div class="col-3"> <h2>Video Title: 
-  ${videoTitle}</h2><div class="display-box"><video src="${videoURL}" controls></video>
+    videosHTML += `<div id="display-videos" class="row"> <div class="col-3"> <h3>Video Title: 
+  ${videoTitle}</h3><div class="display-box"><video src="${videoURL}" controls></video>
   <p class="dont-break-out">${videoDescrip}
   <a href="${largeVideoURL}" + "' target='_blank'>View</a></p></div></div></div>`
   };
@@ -93,7 +105,7 @@ function getCollectionJSON(imageCollectionHref) {
 
 function renderResultsCount(imagesCount, videosCount){
   let countHTML = "";
-  countHTML += `<h2 class="display-results-heading">Here's All You Need to Know</h2><div id="display-results-count"> Images Found: ${imagesCount} | Videos Found: ${videosCount}</div>`;
+  countHTML += `<div id="display-results-count"> Images Found: ${imagesCount} | Videos Found: ${videosCount}</div><h2 class="display-results-heading">Here's All You Need to Know</h2>`;
   $('#js-count-results').html(
     countHTML
   )}
@@ -145,11 +157,3 @@ function displayNASASearchData(searchData) {
   watchNASASubmit();
  }
  $(init);
-
-//handle CSS luminaire
- $(function luminaire() {
-  $('.luminaire:nth-child(2n)').addClass('on');
-  $('.luminaire').on('click', function() {
-    $(this).toggleClass('on');
-  });
-});
