@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- 		removes default styles from browsers Meyer-reset-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link href ="index.css"rel ="stylesheet" type="text/css">
+    <!-- <link href="float-grid.css" rel="stylesheet" type="text/css"/>  -->
+    <script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+<!-- pagination script -->
+    <script type="text/javascript" src="jquery.simplePagination.js"></script>
+    <link type="text/css" rel="stylesheet" href="simplePagination.css"/>         
+    <title>NASA Inspiration</title>
+</head>
+<body>
+<!-- section for start page- Don't forget to use media queries in CSS -->
+    <header role="banner">
+        <h1 class="main-header">NASA Search Generator</h1>
+        <div class="luminaire"></div>
+        <h2 class="welcome-page">Discover The Universe</h2>
+    </header>
+        <main aria-live="polite">
+ <!-- display NASA Search Bar-->             
+            <section class="NASA">           
+            <form role="form" class="NASA-search" aria-label="search box">
+              <label aria-label="search box" for="query-search-box"></label>
+               <input placeholder="search NASA" id="NASA-search-box" type="text" class="js-query-i">
+               <button type="submit" class="trigger">Search NASA</button>
+            </form>
+            </section>
+<!-- display search results content-->                     
+        <div id="js-search-results">
+                <div id="js-count-results" class="modal-content" aria-live="polite"></div>      
+                <div id="js-videos-results"  class="container" aria-live="polite"></div>
+                <div id="js-images-results"  class="container" aria-live="polite"></div>
+        </div>                               
+        </main> 
+<script src="keys.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
