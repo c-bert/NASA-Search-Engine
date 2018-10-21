@@ -23,7 +23,7 @@ h3 {
     font-size: 20px;
     height: 60px;
     padding-top: 15px;
-    padding-bottom: 3px;
+    margin-bottom: 15px;
 }
 
 body {
@@ -63,17 +63,23 @@ p{
  border-style: solid;
  display: inline-block;   
  background-image: url("https://media.giphy.com/media/vp6y8J5c19MtO/giphy.gif");
+ opacity: 0.5;
 }
 
 #NASA-search-box{
-    padding: 2px;
-    border: 50px;
-     color: #00162b;
+    padding: 10px;
+    border-radius: 15px;
+    color: #00162b;
+}
+.NASA:hover{
+    opacity: 1.0;
 }
 
- button {
+button {
     font-size: 14px;
     color: #00162b;
+    border-radius: 15px;
+    padding: 10px;
 }
  /* ------------ js count display ----------- */
  #display-results-count{
@@ -97,9 +103,17 @@ video{
     width: 100%    !important;
     height: auto   !important;
     border-radius: 25px;
+    padding: 5px;
+}
+video:hover{
+    background-color: #00162b;
+    opacity: .85;
+}
+.view-hover-effect:hover{
+    font-size: 20px;
+    text-shadow: 2px 2px 2px black, 0 0 25px #00162b, 0 0 5px darkblue;
 }
 .dont-break-out {
-
     /* These are technically the same, but use both */
     overflow-wrap: break-word;
     word-wrap: break-word;
@@ -108,8 +122,7 @@ video{
     /* This is the dangerous one in WebKit, as it breaks things wherever */
     word-break: break-all;
     /* Instead use this non-standard one: */
-    word-break: break-word;
-  
+    word-break: break-word; 
     /* Adds a hyphen where the word breaks, if supported (No Blink) */
     -ms-hyphens: auto;
     -moz-hyphens: auto;
@@ -117,6 +130,7 @@ video{
     hyphens: auto;
   
   }
+
 #js-videos-results{
     background-image: url("http://www.spitzer.caltech.edu/uploaded_files/other_files/0006/6433/NASA-HiddenUniverse-15.jpg");
     border-radius: 10px;
@@ -177,14 +191,14 @@ img{
     height: 20px;
     border-radius: 50%;
     background-color: #fff;
-    box-shadow: 0 0 40px 20px #fff, 0 0 100px 50px #ff0;
+    box-shadow: 0 0 40px 20px #fff, 0 0 100px 70px #ff0;
     opacity: 0;
-    transition: opacity 8s, transform 8s;
+    transition: opacity 2s, transform 2s;
 }
       
 .on {
  background-color: #fff;
- box-shadow: 0 0 80px 40px #fff, 0 0 300px 95px #f0f;
+ box-shadow: 0 0 80px 40px #f0f, 0 0 400px 100px darkblue ;
 }
 
 .on::before {

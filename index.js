@@ -19,7 +19,7 @@ function watchNASASubmit() {
   //handle CSS luminaire
 $(function luminaire() {
   $('.luminaire:nth-child(2n)').addClass('on');
-  $('.NASA-search').on('click', function() {
+  $('.NASA-search').live('click', function() {
     $(this).toggleClass('on');
   });
 });
@@ -67,7 +67,7 @@ function renderImagesResults(images) {
       imagesHTML += `<div id="display-images" class="row"><div class="col-3"><h3>Image Title: ${imageTitle}</h3>
     <img src="${imageThumbURL}" alt="${imageDescrip}">
     <p>${imageDescrip}
-    <a href="${origImageURL}" + "' target='_blank'>View</a>
+    <a href="${origImageURL}" + "' target='_blank' class="view-hover-effect">View</a>
     </p></div>
     </div>`;
     $('#js-images-results').html(
@@ -92,7 +92,7 @@ function renderImagesResults(images) {
     videosHTML += `<div id="display-videos" class="row"> <div class="col-3"> <h3>Video Title: 
   ${videoTitle}</h3><div class="display-box"><video src="${videoURL}" controls></video>
   <p class="dont-break-out">${videoDescrip}
-  <a href="${largeVideoURL}" + "' target='_blank'>View</a></p></div></div></div>`
+  <a href="${largeVideoURL}" + "' target='_blank' class="view-hover-effect">View</a></p></div></div></div>`
   };
 
  $('#js-videos-results').html(
