@@ -14,20 +14,20 @@ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 crossorigin="anonymous"></script>       
     <title>NASA Inspiration</title>
 </head>
-<body class="background-all">
+<body>
 <!-- section for start page--->
 <header role="heading" aria-level="1" class="header-content-container">
         <h1 class="main-header"><span class="logo-box"></span>NASA Search Generator</h1>
         <h2 aria-level="2" class="welcome-page">Discover The Universe</h2>
         <h3 aria-level="3" class="welcome-descrip">Search NASA video and image archive</h3>
     </header>
-        <main aria-live="polite">
+        <main class="background-all" aria-live="polite">
  <!-- display NASA Search Bar-->                
         <div id="error"></div>
             <section class="NASA" id="header-content-container" aria-live="assertive">           
             <form role="form" class="NASA-search" aria-label="form">
               <label aria-label="search box" for="query-search-box"></label>
-               <input placeholder=' "lift off" "mars" ' id="NASA-search-box" type="text" class="js-query-i">
+               <input aria-label="input box" placeholder=' "lift off" "mars" ' id="NASA-search-box" type="text" class="js-query-i">
                <button type="submit" class="trigger">Search NASA</button>
             </form>
             </section>  
@@ -38,8 +38,8 @@ crossorigin="anonymous"></script>
                 <div id="js-images-results"  class="container" aria-live="polite"></div>
         </div>                               
         </main>
-        <FOOTER aria-label="footer" role="footer">
-            <nav aria-label="nav" role="nav" id="back-to-top-button"> 
+        <FOOTER aria-label="footer" role="contentinfo">
+            <nav aria-label="nav" role="button" id="back-to-top-button"> 
             </nav>
         </FOOTER> 
 <script src="index.js"></script>

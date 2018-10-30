@@ -5,20 +5,20 @@
     box-sizing: border-box;
     
   }
-/* .background-all {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: -1;
-} */
+
 
 body {
-    background-image: linear-gradient(90deg, #780116, #000022);
-    opacity: .9;
+    /* background-image: linear-gradient(90deg, #780116, #000022);
+    opacity: .9; */
+    background-color: black;
     font-family: 'Roboto', sans-serif !important;
 }
+.background-all {
+    background: url("http://www.printawallpaper.com/upload/designs/astronaut_d.jpg") fixed center;
+    background-size: cover;
+}
+
 .logo-box {
-    z-index: -1;
     font-family: 'Roboto', sans-serif !important;
     display: inline-block;
     width: 50px;
@@ -51,13 +51,12 @@ h3 {
     margin-top: 15px;
 }
 .welcome-descrip{
-    line-height: 0;
     padding-top: 0px;
     font-style: italic;
 }
 header, h1, h2, main{
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     color: white;
 }
 
@@ -66,6 +65,9 @@ p {
     color: #00162b;
     text-align: left;
     padding: 14px;
+    background-color: #000022;
+    color: #FEFFFE;
+    border: solid 1px #FEFFFE;
   }
   
 .error{
@@ -81,72 +83,78 @@ p {
 a {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    color: #FEFFFE;
 }
 
 
 /* -------------- search bar and button holder ---------------- */
 .NASA {
- color: #00162b;
- /* horizonal and vertical */
- background-position: 0px -90px;
- background-size: cover;
- /* adjust padding     */
- width: 100%;
- max-width: 500px;
- padding-top: 10px; 
- padding-bottom: 115px; 
- border: 8px #FEFFFE;
- border-style: solid;
- display: inline-block;   
- background-image: url("https://media.giphy.com/media/vp6y8J5c19MtO/giphy.gif");
+    color: #00162b;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    border: 8px solid #FEFFFE;
+    display: inline-block;
 }
 
 #NASA-search-box{
     padding: 0.5em 3em;
     margin: 0 0.3em 0.3em 0;
-    /* margin-top: 5px;
-    padding: 10px;
-    border-radius: 5px; */
+    width: 50%;
     color: #00162b;
 }
+
+/* there is a break point at 487px */
+.trigger{
+    padding: 0.5em 3em;
+    background-color: rgb(0, 0, 34, .8);
+}
+
+.back-to-button{
+    background-color: rgb(0, 0, 34, .5);
+    padding: 0.5em 4em;
+}
+
 .NASA:hover{
     animation: 10s ease infinite;
     font-size: 2.05vw;
-    box-shadow: 0.2vw 0.2vw 0 #780116;
+    box-shadow: 0.2vw 0.2vw 0 #00162b;
 }
 nav {
-    display: block;
     padding: 1em 0;
     text-align: center;
-    margin: 0 auto;
-    padding-top: 10px;
-
   }
-
+#back-to-top-button #display-videos #display-images {
+    padding:0.5em 3em;
+    margin:0 0.3em 0.3em 0;
+}
 button {
-    /* padding:0.5em 3em;
-    margin:0 0.3em 0.3em 0; */
+   
     text-decoration:none;
     text-transform:uppercase;
     font-family:'Roboto',sans-serif;
     color: #FEFFFE;
     font-weight:400;
-    border: solid 3px #FEFFFE;
+    border: solid 4px #FEFFFE;
     background-color: transparent;
 
 }
 
 .fullsize-image{
-    border-color: #780116;
-    font-weight: 700;
-    color: #780116;
-}
-
-button:hover, .fullsize-image:hover{
-    /* font-size: 18px; */
     background-color:#FEFFFE;
     color: #780116;
 }
+.fullsize-image:hover{
+  color: white;
+  border: solid 3px #FEFFFE;
+  background-color: transparent;
+}
+
+button:hover {
+    background-color:#FEFFFE;
+    color: #780116;
+}
+ /*
  /* -----------video set-up-------------- */
 video{
     width: 100%    !important;
@@ -175,12 +183,11 @@ video:hover{
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-  
   }
 
 #js-videos-results{
-    border-radius: 5px;
-    background-image: linear-gradient(-90deg, #FFFDDC, #DBDAE4);
+    /* background-image: linear-gradient(-90deg, #FFFDDC, #DBDAE4); */
+    background-color: rgb(0, 0, 34, .8);
     margin-top: 50px;
 }
 
@@ -192,7 +199,6 @@ img{
     border-radius: 3px;  
 }
 #js-images-results{
-    border-radius: 5px;
     background-image: linear-gradient(-90deg, #FFFDDC, #DBDAE4);
 }
   /* ----------- grid styling ---------- */
@@ -211,7 +217,8 @@ img{
 /* --------------search results display---------------- */
 
 .title-display{
-    background-image: linear-gradient(90deg, #780116, #000022);
+    background-color: #000022;
+    /* background-image: linear-gradient(90deg, #780116, #000022); */
     color: #FEFFFE;
     border: solid #FEFFFE;
 }
@@ -254,7 +261,6 @@ img{
 @media only screen and (max-width: 420px){
 .NASA{
     background-position: 0px -60px;
-}
 }
 
 @media only screen and (width: 370px){

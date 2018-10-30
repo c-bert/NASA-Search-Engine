@@ -72,7 +72,7 @@ function renderImagesResults(images) {
       imagesHTML
         );
     $('#back-to-top-button').html(    
-    `<a href="#header-content-container"><button>Back to top</button></a>`
+    `<a href="#header-content-container"><button class="back-to-button">Back to top</button></a>`
     )
     });
     };
@@ -104,7 +104,7 @@ function getCollectionJSON(imageCollectionHref) {
 function renderResultsCount(imagesCount, videosCount){
     let countHTML = "";
     countHTML += `<div id="display-results-count"><p class="display-results-heading">Your Search Found ${imagesCount} images and ${videosCount} videos</p></div>` + `<div>
-    <nav><a href="#display-videos"><button>Videos</button></a>   <a href="#display-images"><button>Images</button></a></nav>
+    <nav><a href="#display-videos"><button class="back-to-button">Videos</button></a>   <a href="#display-images"><button class="back-to-button">Images</button></a></nav>
     </div>`;
     $('#js-count-results').html(
       countHTML
