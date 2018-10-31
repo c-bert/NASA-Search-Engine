@@ -63,9 +63,9 @@ function renderImagesResults(images) {
     getCollectionJSON(imageCollectionHref).then(function (imageArray){
       const origImageURL = imageArray[0];
       // console.log("This is the original image " + origImageURL);
-      imagesHTML += `<div id="display-images" class="row"><div class="col-3"><h3 class="title-display">Image Title: ${imageTitle}</h3><a href="${origImageURL}" + "' target='_blank' class="view-hover-effect"><button type="button" class="fullsize-image">View Full Size<STYLE>A {text-decoration: none;}</STYLE></button></a>
+      imagesHTML += `<div class="row"><div class="col-3"><h3 class="title-display">Image Title: ${imageTitle}</h3><a href="${origImageURL}" + "' target='_blank' class="view-hover-effect"><button type="button" class="fullsize-image">View Full Size<STYLE>A {text-decoration: none;}</STYLE></button></a>
     <img src="${imageThumbURL}" alt="${imageDescrip}">
-    <p class="descript-styles">${imageDescrip}
+    <p class="descript-styles dont-break-out">${imageDescrip} 
     </p></div>
     </div>`;
     $('#js-images-results').html(
@@ -90,7 +90,7 @@ function renderImagesResults(images) {
     videoTitle= videoTitle.replace(/[_-]/g, " ");
     console.log("video JSON " + videoJSON);
     console.log("video description " + videoDescrip);
-    videosHTML += `<div id="display-videos" class="row"> <div class="col-3"> <h3 class="title-display">Video Title: ${videoTitle}</h3><div class="display-box"><video src="${videoURL}" controls></video><p class="dont-break-out">${videoDescrip}</p></div></div></div>`
+    videosHTML += `<div class="row"> <div class="col-3"> <h3 class="title-display">Video Title: ${videoTitle}</h3><div class="display-box"><video src="${videoURL}" controls></video><p class="dont-break-out">${videoDescrip}</p></div></div></div>`
   };
 
  $('#js-videos-results').html(
@@ -104,7 +104,7 @@ function getCollectionJSON(imageCollectionHref) {
 function renderResultsCount(imagesCount, videosCount){
     let countHTML = "";
     countHTML += `<div id="display-results-count"><p class="display-results-heading">Your Search Found ${imagesCount} images and ${videosCount} videos</p></div>` + `<div>
-    <nav><a href="#display-videos"><button class="back-to-button">Videos</button></a>   <a href="#display-images"><button class="back-to-button">Images</button></a></nav>
+    <nav><a href="#js-videos-results"><button class="back-to-button">Videos</button></a>   <a href="#js-images-results"><button class="back-to-button">Images</button></a></nav>
     </div>`;
     $('#js-count-results').html(
       countHTML
