@@ -1,75 +1,167 @@
-/* ------------basic styling ------------*/
+/* OPen a new CSS, and move things over block by block to clean */
+
+/* ---------------- basic styling ------------*/
 * {
     box-sizing: border-box;
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
   }
 
-header {
-/* background-color: #000; */
 
-background-image: url("https://media.giphy.com/media/xTg8AOrfulvLaGx39K/giphy.gif");
-opacity: .5;
+body {
+    /* background-image: linear-gradient(90deg, #780116, #000022);
+    opacity: .9; */
+    background-color: black;
+    font-family: 'Roboto', sans-serif !important;
 }
-.display-results-heading {
-color: white;
+.background-all {
+    background: url("http://www.printawallpaper.com/upload/designs/astronaut_d.jpg") fixed center;
+    background-size: cover;
 }
+
+.logo-box {
+    font-family: 'Roboto', sans-serif !important;
+    display: inline-block;
+    width: 50px;
+    height: 43px;
+    background-size: contain;
+    background-image: url("https://seeklogo.com/images/N/NASA-logo-9411797223-seeklogo.com.png");
+}
+
 h1 {
- font-size: 40px;
- padding: 15px;
-
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
 }
 
 h2 {
- font-size: 25px;
-
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
 }
-
-body {
- background-color: #00162b;   
+h1, h2 {
+    color:  white;;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 580px;
 }
-
+h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.welcome-descrip{
+    padding-top: 0px;
+    font-style: italic;
+}
 header, h1, h2, main{
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     color: white;
-  }
-
-p, body{
-    text-align: justify center;
-    padding: 20px;
-  }
-
-  /* -----------search bars set-up-------------- */
-section {
- padding: 20px;
- margin: 5px;
- border: 5px #000;
- border-style: solid;
- display: inline-block;
- background-color: #f8dfcf;
 }
-/* button holder */
+
+p {
+    font-family: 'Roboto', sans-serif !important;
+    color: #00162b;
+    text-align: left;
+    padding: 14px;
+    background-color: #000022;
+    color: #FEFFFE;
+    border: solid 1px #FEFFFE;
+  }
+  
+.error{
+    font-family: 'Roboto', sans-serif;
+    padding: 30px;
+    color: #00162b;
+    text-align: center;
+    font-size: 20px;
+    background: red;
+    border-radius: 5px;
+}
+
+a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #FEFFFE;
+}
+
+
+/* -------------- search bar and button holder ---------------- */
 .NASA {
- padding: 105px;
- padding-bottom: 170px;   
- background-image: url("https://media.giphy.com/media/vp6y8J5c19MtO/giphy.gif");
+    color: #00162b;
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    border: 8px solid #FEFFFE;
+    display: inline-block;
 }
+
 #NASA-search-box{
-    padding: 2px;
-    border: 50px;
+    padding: 0.5em;
+    margin: 0 0.3em 0.3em 0;
+    width: 50%;
     color: #00162b;
 }
 
- button {
-    font-size: 14px;
-    color: #00162b;
+/* there is a break point at 487px */
+.trigger{
+    padding: 0.5em 3em;
+    background-color: rgb(0, 0, 34, .8);
 }
 
+.back-to-button{
+    background-color: rgb(0, 0, 34, .5);
+    padding: 0.5em 4em;
+}
+
+.NASA:hover{
+    animation: 10s ease infinite;
+    font-size: 2.05vw;
+    box-shadow: 0.2vw 0.2vw 0 #00162b;
+}
+nav {
+    padding: 1em 0;
+    text-align: center;
+  }
+
+button {
+   
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    color: #FEFFFE;
+    font-weight:400;
+    border: solid 4px #FEFFFE;
+    background-color: transparent;
+
+}
+
+.fullsize-image{
+    background-color:#FEFFFE;
+    color: #780116;
+}
+.fullsize-image:hover{
+  color: white;
+  border: solid 3px #FEFFFE;
+  background-color: transparent;
+}
+
+button:hover {
+    background-color:#FEFFFE;
+    color: #780116;
+}
+ /*
  /* -----------video set-up-------------- */
 video{
     width: 100%    !important;
     height: auto   !important;
+    border-radius: 25px;
+    padding: 5px;
+}
+video:hover{
+    background-color: #00162b;
+    opacity: .85;
 }
 .dont-break-out {
 
@@ -88,77 +180,98 @@ video{
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
-  
   }
+
+#js-videos-results{
+    /* background-image: linear-gradient(-90deg, #FFFDDC, #DBDAE4); */
+    background-color: rgb(0, 0, 34, .8);
+    margin-top: 50px;
+}
 
 /* --------- images set-up ------------*/
 img{
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 3px;  
 }
-
-  /* -----------grid styling---------- */
+#js-images-results{
+    background-color: rgb(0, 0, 34, .8);
+    margin-top: 80px;
+}
+  /* ----------- grid styling ---------- */
   .container{
     display: grid;
     grid-template-columns:repeat(3, 1fr);
-    grid-gap: 10px 10px;
-    margin-bottom: 150px;
-  }
-
-  #display-images{
-
-  }
-
-  /* --------luminaire effect---------- */
-       
-.luminaire {
-    position: relative;
-    display: block;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #000;
-    box-shadow: 0 0 40px 20px #fff, 0 0 100px 50px #0ff;
-    transition: box-shadow 8s ease-out;
-    animation: spin 12s linear infinite;
-    top: calc(50% - 65px);
-    left: calc(50% - 290px);
-    margin: 0 auto;
+    grid-gap: 5px 5px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
     text-align: center;
-} 
-@keyframes spin {
-    100% {
-    transform: rotate(360deg);
+  }
+
+/* --------------search results display---------------- */
+
+.title-display{
+    background-color: #000022;
+    /* background-image: linear-gradient(90deg, #780116, #000022); */
+    color: #FEFFFE;
+    border: solid #FEFFFE;
+}
+ /* ------------ js count display ----------- */
+ #display-results-count{
+    border: solid;
+    border-color: #FEFFFE;
+    background-color: #070707;
+    width: 50%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 auto; 
+ }
+
+ .display-results-heading, .js-count-results{
+    text-align: center;
+    font-size: 35px;
+    color: #FEFFFE;
+ }
+
+/* ------------responsive grid--------- */
+@media only screen and (max-width: 600px){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 150px;
+        margin: 0 auto;
+      }
+    main {
+        margin: 0 auto;
+        text-align: center;
+    }
+    button, button:hover {
+        font-size: 12px;
+    }
+    #display-results-count {
+        width: 100%;
     }
 }
-
-.luminaire::before, .luminaire::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: calc(50% - 10px);
-    left: calc(50% - 10px);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 0 40px 20px #fff, 0 0 100px 50px #ff0;
-    opacity: 0;
-    transition: opacity 8s, transform 8s;
-}
-      
-.on {
- background-color: #fff;
- box-shadow: 0 0 80px 40px #fff, 0 0 300px 95px #f0f;
+@media only screen and (max-width: 420px){
+.NASA{
+    background-position: 0px -60px;
 }
 
-.on::before {
-  transform: translateX(-90px);
-  opacity: 1;
-}
-      
-.on::after {
-  transform: translateX(90px);
-  opacity: 1;
-}
+@media only screen and (width: 370px){
+    .NASA{
+        background-position: 0px -30px;
+    }
+ }
+
+ @media only screen and (width: 768px){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        margin-bottom: 150px;
+        margin: 0 auto;
+      }
+ }
