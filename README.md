@@ -21,5 +21,5 @@ Results
 <li>jQuery</li>
 <li>A11y Friendly</li>
 
-<h5> Features </h5>
-Acess to NASA data to uncover mysteries of the universe. Search for the latest rover mission, explore a distant star, watch a documentary.
+<h5> Summary Features </h5>
+Access to NASA data to uncover mysteries of the universe. Search for the latest rover mission, explore a distant star, watch a documentary all on one screen. 
