@@ -23,3 +23,5 @@ Results
 
 <h5> Summary Features </h5>
 Access to NASA data to uncover mysteries of the universe. Search for the latest rover mission, explore a distant star, watch a documentary all on one screen. 
+
+Feedback: https://dashboard.thinkful.com/feedback/7322
