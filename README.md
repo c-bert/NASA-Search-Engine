@@ -3,7 +3,7 @@
 
 Link: https://github.com/c-bert/NASA-Search-Engine
 
-<h2> Motivation <h2>
+<h2> Motivation </h2>
 Be inspired and discover the universe with this NASA search geneator. 
 
 <h3> Screenshots </h3>
